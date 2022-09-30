@@ -1,0 +1,81 @@
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: min(568px, 100%);
+  z-index: 11;
+  background-color: map-get($colors, "white");
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  max-height: 98vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: $transition;
+  @media (max-width: map-get($media, "lg")) {
+    width: min(530px, 100%);
+  }
+  &.active {
+    pointer-events: auto;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  &--top {
+    padding: 34px 48px;
+    background-color: map-get($colors, "gray-100");
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @media (max-width: map-get($media, "lg")) {
+      padding: 34px 32px;
+    }
+    @media (max-width: map-get($media, "sm")) {
+      padding: 34px 24px;
+    }
+  }
+
+  &--close {
+    padding: 0;
+    &:hover {
+      svg {
+        path {
+          stroke: map-get($colors, "accent");
+        }
+      }
+    }
+    &:active {
+      svg {
+        transform: scale(0.9);
+      }
+    }
+    svg {
+      display: block;
+      transition: $transition;
+      path {
+        stroke: map-get($colors, "black-100");
+        transition: $transition;
+      }
+    }
+  }
+
+  &--body {
+    flex-grow: 1;
+    overflow: hidden;
+    display: flex;
+  }
+
+  &--footer {
+    margin-top: 24px;
+    padding: 0 48px 48px;
+    flex-shrink: 0;
+    @media (max-width: map-get($media, "lg")) {
+      padding: 0 32px 40px;
+    }
+    @media (max-width: map-get($media, "sm")) {
+      padding: 0 24px 24px;
+    }
+  }
+}

@@ -1,0 +1,73 @@
+.custom-select {
+  position: relative;
+  text-align: left;
+  border-radius: 3px;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  line-height: 24px;
+  color: map-get($colors, "black-100");
+  &.active {
+    border-radius: 0 0 3px 3px;
+    border-top-color: transparent;
+    .current {
+      .arrow {
+        margin-top: 2px;
+        transform: rotate(180deg);
+      }
+    }
+    .custom-select {
+      &__list {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
+      }
+    }
+  }
+
+  .current {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    span {
+      flex-grow: 1;
+    }
+    .arrow {
+      flex-shrink: 0;
+      margin-left: 24px;
+      width: 16px;
+      height: 16px;
+      transition: $transition;
+      @media (max-width: map-get($media, "sm")) {
+        margin-left: 12px;
+      }
+    }
+  }
+
+  &__list {
+    position: absolute;
+    background-color: map-get($colors, "gray-100");
+    padding: 24px;
+    top: 100%;
+    left: 0;
+    transform: translateY(5px);
+    opacity: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 2;
+    transition: $transition;
+    li {
+      display: block;
+      line-height: 24px;
+      cursor: pointer;
+      transition: $transition;
+      &:hover {
+        color: map-get($colors, "accent");
+      }
+      + li {
+        margin-top: 12px;
+      }
+    }
+  }
+}

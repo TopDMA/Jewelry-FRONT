@@ -1,0 +1,19 @@
+.new-collection {
+  .product {
+    &__row {
+      margin-top: 40px;
+    }
+  }
+  .h3 {
+    + * {
+      margin-top: 40px;
+    }
+  }
+  &__btn {
+    margin-top: 72px;
+    text-align: center;
+    @media (max-width: map-get($media, "lg")) {
+      margin-top: 48px;
+    }
+  }
+}

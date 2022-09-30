@@ -1,0 +1,45 @@
+.category-blocks {
+  text-align: center;
+  &__row {
+    margin-top: 40px;
+    margin-bottom: -24px;
+  }
+
+  &__col {
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    &:hover {
+      .category-blocks__item-img img {
+        transform: scale(1.05);
+      }
+      h5 {
+        transform: translateY(-5px);
+      }
+    }
+    h5 {
+      font-weight: 400;
+      margin-top: 24px;
+      transition: 0.35s ease-out;
+    }
+  }
+
+  &__item-img {
+    height: 287px;
+    position: relative;
+    overflow: hidden;
+    @media (max-width: map-get($media, "xxxl")) {
+      height: 240px;
+    }
+    @media (max-width: map-get($media, "lg")) {
+      height: 190px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.35s ease-out;
+    }
+  }
+}

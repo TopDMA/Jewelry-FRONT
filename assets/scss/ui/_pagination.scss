@@ -1,0 +1,46 @@
+.pagination {
+  &__list {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+    font-size: $font_size - 2px;
+  }
+
+  &__item {
+    flex-shrink: 0;
+    &.active {
+      pointer-events: none;
+      > * {
+        color: map-get($colors, "accent");
+      }
+    }
+    > * {
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &--dotts {
+      pointer-events: none;
+    }
+
+    &--prev,
+    &--next {
+      svg {
+        path {
+          stroke: map-get($colors, "black-100");
+          transition: $transition;
+        }
+      }
+      &:hover {
+        svg {
+          path {
+            stroke: map-get($colors, "accent");
+          }
+        }
+      }
+    }
+  }
+}

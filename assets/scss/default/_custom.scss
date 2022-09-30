@@ -1,0 +1,213 @@
+.app {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: stretch;
+	min-height: 100vh;
+	position: relative;
+	overflow: hidden;
+	padding-top: 169px;
+	@media (max-width: map-get($media, "lg")) {
+		padding-top: 108px;
+	}
+	@media (max-width: map-get($media, "sm")) {
+		padding-top: 98px;
+	}
+	.main {
+		flex-grow: 1;
+	}
+}
+
+// CUSTOM SCROLL
+@media (min-width: 1200px) {
+	* {
+		scrollbar-color: map-get($colors, "gray") transparent;
+		scrollbar-width: thin;
+		&::-webkit-scrollbar {
+			width: 3px;
+			background-color: transparent;
+			border-radius: 0;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: map-get($colors, "gray");
+			border-radius: 0;
+			&:hover {
+				background-color: map-get($colors, "black-100");
+			}
+		}
+	}
+	body {
+		&::-webkit-scrollbar {
+			width: 6px;
+		}
+	}
+}
+
+// PREGRESS
+.pregress {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 6px;
+	z-index: 99999;
+	.bar {
+		width: 0;
+		height: inherit;
+		background: linear-gradient(90deg, #51fff5 0%, #00c5e0 100%);
+	}
+}
+
+// LOGO
+.logo {
+	text-decoration: none;
+	display: inline-flex;
+	line-height: 1;
+	img {
+		display: block;
+		max-width: 100%;
+		@media (max-width: map-get($media, "lg")) {
+			max-width: 134px;
+		}
+		@media (max-width: map-get($media, "sm")) {
+			max-width: 104px;
+		}
+	}
+}
+
+// CUSTOM CLASSES
+.disabled {
+	color: map-get($colors, "gray");
+	pointer-events: none;
+	svg {
+		path {
+			stroke: map-get($colors, "gray");
+		}
+	}
+}
+
+.pt {
+	padding-top: 120px;
+	@media (max-width: map-get($media, "xl")) {
+		padding-top: 110px;
+	}
+}
+
+.pb {
+	padding-bottom: 120px;
+	@media (max-width: map-get($media, "xl")) {
+		padding-bottom: 110px;
+	}
+}
+
+.mt {
+	margin-top: 120px;
+	@media (max-width: map-get($media, "xl")) {
+		margin-top: 110px;
+	}
+}
+
+.mb {
+	margin-bottom: 120px;
+	@media (max-width: map-get($media, "xl")) {
+		margin-bottom: 110px;
+	}
+}
+
+.slogan {
+	margin-top: 8px;
+	color: map-get($colors, "black-100");
+}
+
+.secondary {
+	color: map-get($colors, "black");
+}
+
+.center {
+	text-align: center;
+}
+
+// SLIDER ARROW
+.slick-arrow {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 24px;
+	height: 24px;
+	z-index: 2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	transition: $transition;
+	img {
+		transition: $transition;
+	}
+	&__prev {
+		left: 12px;
+		&:hover {
+			img {
+				transform: translateX(-3px);
+			}
+		}
+	}
+	&__next {
+		right: 12px;
+		&:hover {
+			img {
+				transform: translateX(3px);
+			}
+		}
+	}
+}
+
+// SLIDER DOTTS
+.slick-dots {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	column-gap: 16px;
+	li {
+		position: relative;
+		width: 12px;
+		height: 12px;
+		border-radius: 50%;
+		button {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			padding: 0;
+			border: none;
+			opacity: 0;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 4px;
+			height: 4px;
+			transform: translate(-50%, -50%);
+			border-radius: 50%;
+			background-color: map-get($colors, "black");
+			transition: $transition;
+		}
+		&:hover {
+			&:before {
+				width: 6px;
+				height: 6px;
+				background-color: map-get($colors, "accent");
+			}
+		}
+		&.slick-active {
+			&:before {
+				width: 100%;
+				height: 100%;
+				background-color: map-get($colors, "accent");
+			}
+		}
+	}
+}

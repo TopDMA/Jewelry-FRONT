@@ -1,0 +1,32 @@
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  column-gap: 40px;
+  @media (max-width: map-get($media, "xl")) {
+    column-gap: 32px;
+  }
+  h6 {
+    margin-bottom: 28px;
+  }
+  a {
+    display: block;
+    &:hover {
+      svg {
+        fill: map-get($colors, "accent");
+        transform: scale(0.9);
+      }
+    }
+    svg {
+      width: 24px;
+      height: 24px;
+      display: block;
+      fill: map-get($colors, "black");
+      transition: $transition;
+      @media (max-width: map-get($media, "xl")) {
+        width: 18px;
+        height: 18px;
+      }
+    }
+  }
+}

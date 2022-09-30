@@ -1,0 +1,41 @@
+.header-page {
+  padding-top: 72px;
+  padding-bottom: 72px;
+  min-height: 400px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  @media (max-width: map-get($media, "lg")) {
+    background-position: 45% center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    min-height: 290px;
+  }
+  @media (max-width: map-get($media, "sm")) {
+    background-position: 50% center;
+  }
+
+  &--variant2 {
+    min-height: auto;
+    border-bottom: 8px solid map-get($colors, "gray-100");
+    .header-page__content {
+      max-width: 860px;
+    }
+  }
+
+  &__content {
+    max-width: 548px;
+    @media (max-width: map-get($media, "lg")) {
+      max-width: 400px;
+    }
+    h1 {
+      font-weight: 400;
+    }
+    p {
+      margin-top: 20px;
+      line-height: 1.75;
+    }
+  }
+}

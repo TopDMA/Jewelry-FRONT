@@ -1,0 +1,92 @@
+input,
+textarea {
+	&::placeholder {
+		color: map-get($colors, "gray-400");
+		opacity: 1;
+		transform: translateX(0);
+		transition: 0.35s ease;
+	}
+}
+
+input[type="text"]::-ms-clear {
+	display: none;
+	width: 0;
+	height: 0;
+}
+input[type="text"]::-ms-reveal {
+	display: none;
+	width: 0;
+	height: 0;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+	display: none;
+}
+
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+textarea {
+	display: block;
+	width: 100%;
+	height: 48px;
+	padding: 0;
+	font-family: $font_family;
+	font-size: inherit;
+	border-style: solid;
+	border-width: 0 0 2px 0;
+	color: map-get($colors, "black");
+	border-color: map-get($colors, "black-100");
+	transition: $transition;
+	&:hover {
+		border-color: map-get($colors, "accent");
+	}
+	&:focus {
+		border-color: map-get($colors, "accent");
+		&::placeholder {
+			transform: translateX(5px);
+			opacity: 0;
+		}
+	}
+}
+
+// FLOAT LABEL
+.input-cover {
+	position: relative;
+	label {
+		font-size: inherit;
+		position: absolute;
+		width: 100%;
+		top: 12px;
+		left: 0;
+		pointer-events: none;
+		white-space: nowrap;
+		overflow: hidden;
+		z-index: 1;
+		color: map-get($colors, "gray-400");
+		transition: 0.15s linear;
+	}
+	input,
+	textarea {
+		&::placeholder {
+			opacity: 0 !important;
+		}
+		&:not(:placeholder-shown) {
+			~ label {
+				top: -3px;
+				font-size: 12px;
+			}
+		}
+		&:focus {
+			~ label {
+				top: -3px;
+				font-size: 12px;
+			}
+		}
+	}
+}

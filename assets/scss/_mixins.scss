@@ -1,0 +1,48 @@
+@mixin link-hover {
+  position: relative;
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 2px;
+    width: 30%;
+    background-color: map-get($colors, "accent");
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: $transition;
+  }
+  &:hover {
+    color: map-get($colors, "black");
+    &:before {
+      opacity: 1;
+      width: 100%;
+    }
+  }
+}
+
+@mixin btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    svg {
+      path {
+        stroke: map-get($colors, "accent");
+      }
+    }
+  }
+  &:active {
+    svg {
+      transform: translate(0.9);
+    }
+  }
+  svg {
+    transition: $transition;
+    path {
+      stroke: map-get($colors, "black-100");
+      transition: $transition;
+    }
+  }
+}

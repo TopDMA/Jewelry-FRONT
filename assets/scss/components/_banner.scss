@@ -1,0 +1,137 @@
+.banner {
+  &__row {
+    margin-bottom: -24px;
+  }
+
+  &__col {
+    margin-bottom: 24px;
+  }
+
+  &__item {
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    @media (max-width: map-get($media, "xl")) {
+      min-height: 360px;
+    }
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: 0.35s ease-out;
+      pointer-events: none;
+    }
+
+    .title {
+      color: map-get($colors, "black");
+    }
+
+    &--variant1 {
+      padding: 80px 50px;
+      align-items: flex-end;
+      @media (max-width: map-get($media, "xxxl")) {
+        padding: 60px 40px;
+      }
+      @media (max-width: map-get($media, "xl")) {
+        padding: 48px 32px;
+      }
+      @media (max-width: map-get($media, "sm")) {
+        padding: 32px 24px;
+      }
+      &:hover {
+        .banner {
+          &__item-content {
+            transform: translateX(-10px);
+            @media (max-width: map-get($media, "xl")) {
+              transform: translateX(-5px);
+            }
+          }
+        }
+      }
+      .title {
+        max-width: 270px;
+      }
+
+      .text {
+        line-height: 1.625;
+        margin-top: 35px;
+        max-width: 416px;
+        @media (max-width: map-get($media, "xl")) {
+          margin-top: 24px;
+        }
+      }
+    }
+
+    &--variant2 {
+      padding: 44px 48px;
+      @media (max-width: map-get($media, "xxxl")) {
+        padding: 28px 32px;
+      }
+      @media (max-width: map-get($media, "xl")) {
+        padding: 28px 24px;
+      }
+      &:hover {
+        .banner {
+          &__item-content {
+            transform: translateY(-10px);
+            @media (max-width: map-get($media, "xl")) {
+              transform: translateY(-5px);
+            }
+          }
+        }
+      }
+      .text {
+        margin-top: 20px;
+      }
+    }
+
+    &--variant3 {
+      padding: 60px 48px;
+      align-items: flex-end;
+      @media (max-width: map-get($media, "xxxl")) {
+        padding: 48px 32px;
+      }
+      @media (max-width: map-get($media, "xl")) {
+        padding: 32px 24px;
+      }
+      &:hover {
+        .banner {
+          &__item-content {
+            transform: translateX(-10px);
+            @media (max-width: map-get($media, "xl")) {
+              transform: translateX(-5px);
+            }
+          }
+        }
+      }
+      .title {
+        margin-top: 24px;
+      }
+      .text {
+        max-width: 155px;
+        line-height: 1.625;
+        @media (max-width: map-get($media, "xl")) {
+          max-width: none;
+        }
+        @media (max-width: map-get($media, "md")) {
+          max-width: 175px;
+        }
+      }
+    }
+  }
+
+  &__item-content {
+    position: relative;
+    z-index: 1;
+    transition: 0.35s ease-out;
+  }
+}

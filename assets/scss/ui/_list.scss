@@ -1,0 +1,48 @@
+ol,
+ul {
+  &:not([class]) {
+    li {
+      position: relative;
+      + li {
+        margin-top: 9px;
+      }
+    }
+  }
+}
+
+ol {
+  &:not([class]) {
+    counter-reset: list 0;
+    li {
+      padding-left: 20px;
+      &:before {
+        counter-increment: list;
+        content: counter(list) ".";
+        display: inline;
+        line-height: inherit;
+        color: map-get($colors, "accent");
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+  }
+}
+
+ul {
+  &:not([class]) {
+    li {
+      padding-left: 20px;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 10px;
+        left: 0;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background-color: map-get($colors, "accent");
+      }
+    }
+  }
+}

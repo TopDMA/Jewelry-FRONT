@@ -1,0 +1,59 @@
+.footer {
+  border-top: 1px solid map-get($colors, "accent");
+  padding: 20px 0;
+  background-color: map-get($colors, "white");
+  padding-block: 46px;
+  .row {
+    row-gap: 48px;
+  }
+  h6 {
+    margin-bottom: 28px;
+    @media (max-width: map-get($media, "lg")) {
+      margin-bottom: 20px;
+    }
+  }
+  &__right-col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    @media (max-width: map-get($media, "xl")) {
+      align-items: flex-start;
+    }
+    .social {
+      margin-top: 24px;
+    }
+    .copyright {
+      margin-top: 24px;
+      span {
+        font-weight: 300;
+      }
+      a {
+        color: map-get($colors, "accent");
+        border-bottom: 1px solid map-get($colors, "accent");
+        &:hover {
+          color: map-get($colors, "black");
+          border-color: map-get($colors, "black");
+        }
+      }
+    }
+  }
+
+  .list-contacts {
+    li {
+      display: flex;
+      align-items: flex-start;
+      + li {
+        margin-top: 9px;
+      }
+    }
+    &__icon {
+      flex-shrink: 0;
+      margin-right: 14px;
+      height: 23px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

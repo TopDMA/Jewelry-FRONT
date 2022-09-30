@@ -1,0 +1,28 @@
+$colors: (
+  "accent": #00c5e0,
+  "white": #fff,
+  "black": #000,
+  "black-100": #22292a,
+  "gray": #dadfe0,
+  "gray-400": #909495,
+  "gray-100": #eff4f4,
+  "orange": #e06c00,
+);
+
+$gradient: radial-gradient(62.5% 125% at 50% 175%, #51fff5 0%, #00c5e0 100%);
+
+$font_size: 16px;
+$border_radius: 0;
+$transition: 0.3s ease;
+
+$font_family: "Jost", sans-serif;
+
+$media: (
+  xs: "575px",
+  sm: "767px",
+  md: "991px",
+  lg: "1199px",
+  xl: "1280px",
+  xxl: "1440px",
+  xxxl: "1680px",
+);

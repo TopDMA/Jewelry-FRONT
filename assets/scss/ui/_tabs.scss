@@ -1,0 +1,23 @@
+.tab-content {
+  position: relative;
+}
+.tab {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+  transform: translateY(10px);
+  width: 100%;
+  &.active {
+    position: relative;
+    pointer-events: auto;
+    z-index: 1;
+    transition-timing-function: ease-in-out;
+    transition-delay: 0.2s;
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}

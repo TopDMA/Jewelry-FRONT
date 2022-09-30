@@ -1,0 +1,139 @@
+.collection {
+  &__row {
+    margin-bottom: -24px;
+    + .collection__row {
+      margin-top: 24px;
+      @media (max-width: map-get($media, "xl")) {
+        margin-top: 72px;
+      }
+    }
+  }
+
+  &__col {
+    margin-bottom: 24px;
+    @media (max-width: map-get($media, "xl")) {
+      order: 1;
+    }
+    &--info {
+      @media (max-width: map-get($media, "xl")) {
+        order: 0;
+      }
+      .collection__item {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 72px 48px;
+        @media (max-width: map-get($media, "xxxl")) {
+          padding: 48px 32px;
+        }
+        @media (max-width: map-get($media, "xxl")) {
+          padding: 32px 24px;
+        }
+        @media (max-width: map-get($media, "sm")) {
+          min-height: auto;
+          padding: 0 0 24px;
+        }
+        .h4 {
+          flex-shrink: 0;
+        }
+        .text {
+          flex-grow: 1;
+          margin-top: 24px;
+        }
+        .btn {
+          margin-top: 24px;
+          flex-shrink: 0;
+          width: 100%;
+          @media (max-width: map-get($media, "sm")) {
+            margin-top: 40px;
+          }
+        }
+      }
+    }
+  }
+
+  &__item {
+    position: relative;
+    min-height: 500px;
+    overflow: hidden;
+    display: block;
+    @media (max-width: map-get($media, "xxxl")) {
+      min-height: 460px;
+    }
+    @media (max-width: map-get($media, "xxl")) {
+      min-height: 410px;
+    }
+    &:hover {
+      img {
+        transform: scale(1.05);
+      }
+      .collection__item-content {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: 0.35s ease-out;
+      pointer-events: none;
+    }
+  }
+
+  &__item-content {
+    position: absolute;
+    bottom: 72px;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: map-get($colors, "gray-100");
+    min-height: 56px;
+    opacity: 0;
+    transform: translateY(12px);
+    transition: 0.35s ease-out;
+    @media (max-width: map-get($media, "xxxl")) {
+      bottom: 48px;
+    }
+    @media (max-width: map-get($media, "xxl")) {
+      bottom: 32px;
+    }
+    @media (max-width: map-get($media, "lg")) {
+      opacity: 1;
+      transform: none;
+      background-color: rgba(map-get($colors, "gray-100"), 0.5);
+    }
+    .name {
+      padding: 0 32px;
+      flex-grow: 1;
+      @media (max-width: map-get($media, "xxxl")) {
+        padding: 0 24px;
+      }
+      .h6 {
+        line-height: 1.2;
+      }
+    }
+    .btn {
+      flex-shrink: 0;
+      width: min(120px, 100%);
+      align-self: stretch;
+      padding: 0 12px;
+      box-shadow: none;
+      @media (max-width: map-get($media, "xxxl")) {
+        width: min(100px, 100%);
+      }
+      @media (max-width: map-get($media, "xxl")) {
+        width: min(80px, 100%);
+      }
+      @media (max-width: map-get($media, "lg")) {
+        display: none;
+      }
+    }
+  }
+}

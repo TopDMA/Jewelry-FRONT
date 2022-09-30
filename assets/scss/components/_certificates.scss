@@ -1,0 +1,33 @@
+.certificates {
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -12px;
+  }
+
+  &__col {
+    padding: 12px;
+    flex: 33.33333%;
+    max-width: 33.3333%;
+    @media (max-width: map-get($media, "lg")) {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+  }
+
+  &__item {
+    .name {
+      display: block;
+      font-weight: 500;
+      margin-top: 12px;
+    }
+  }
+
+  &__item-img {
+    background-color: map-get($colors, "white");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid map-get($colors, "gray-100");
+  }
+}

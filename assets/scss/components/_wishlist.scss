@@ -1,0 +1,13 @@
+.page-wishlist {
+  .product {
+    &__item-body {
+      border-color: map-get($colors, "accent");
+    }
+    &__item-bottom {
+      opacity: 1;
+      position: relative;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+  }
+}

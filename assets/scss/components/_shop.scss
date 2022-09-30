@@ -1,0 +1,58 @@
+.shop {
+  &__top {
+    padding-block: 24px;
+    font-size: $font_size - 2px;
+  }
+
+  &__top-showing {
+    line-height: 24px;
+    color: map-get($colors, "gray-400");
+  }
+
+  &__top-sort {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    @media (max-width: map-get($media, "xs")) {
+      justify-content: flex-start;
+      margin-top: 12px;
+    }
+    > span {
+      color: map-get($colors, "gray-400");
+    }
+    .custom-select {
+      flex-shrink: 0;
+      margin-left: 12px;
+      &__list {
+        left: auto;
+        right: 0;
+        min-width: max-content;
+      }
+    }
+  }
+
+  &__bottom {
+    margin-top: 72px;
+    align-items: center;
+    justify-content: flex-end;
+    @media (max-width: map-get($media, "xl")) {
+      gap: 40px;
+    }
+    @media (max-width: map-get($media, "lg")) {
+      margin-top: 48px;
+    }
+
+    .pagination {
+      display: flex;
+      justify-content: flex-end;
+      @media (max-width: map-get($media, "xl")) {
+        justify-content: center;
+      }
+    }
+  }
+
+  &__bottom-btn {
+    display: flex;
+    justify-content: center;
+  }
+}

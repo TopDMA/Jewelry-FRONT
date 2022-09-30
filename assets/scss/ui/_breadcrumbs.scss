@@ -1,0 +1,22 @@
+.breadcrumbs {
+  font-size: 12px;
+  padding-block: 24px;
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 12px;
+    li {
+      &:not(:last-child) {
+        &:after {
+          content: "/";
+          display: inline-block;
+          margin-left: 12px;
+        }
+      }
+      span {
+        color: map-get($colors, "gray-400");
+      }
+    }
+  }
+}
