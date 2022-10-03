@@ -27,6 +27,7 @@ input::-moz-focus-inner {
   text-align: center;
   height: 56px;
   line-height: 1.2;
+  font-weight: 500;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -64,6 +65,17 @@ input::-moz-focus-inner {
   span {
     position: relative;
     z-index: 1;
+  }
+
+  &.btn-invert {
+    color: map-get($colors, "black-100");
+    background: transparent;
+    border: 2px solid map-get($colors, "accent");
+    box-shadow: none;
+    &:hover {
+      color: map-get($colors, "white");
+      border-color: map-get($colors, "black-100");
+    }
   }
 }
 

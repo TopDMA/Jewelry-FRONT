@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Jewelry Plant - Gift Cards</title>
+  <title>Jewelry Plant - Shopping Bag</title>
   <!-- =================== META =================== -->
   <meta name="keywords" content="" />
   <meta name="description" content="" />
@@ -134,7 +134,7 @@
             </svg>
           </a> -->
           <div class="wishlist">
-            <a href="wishlist.html" class="wishlist__btn">
+            <a href="wishlist.html" class="wishlist__btn active">
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
                 <g clip-path="url(#clip0_2_594)">
                   <path class="icon-color"
@@ -483,195 +483,154 @@
     <!-- =============== HEADER END =============== -->
 
     <main class="main">
-      <!-- ================ HEADER PAGE ================ -->
-      <div class="header-page header-page--variant2">
+      <!-- ================= BREADCRUMBS ================= -->
+      <div class="breadcrumbs">
         <div class="container">
-          <div class="header-page__content">
-            <h1>Gift Cards</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-              laudantium. </p>
-          </div>
+          <ul class="breadcrumbs__list">
+            <li><a href="#">Home</a></li>
+            <li><span>Diamond Rings</span></li>
+          </ul>
         </div>
       </div>
-      <!-- =============== HEADER PAGE END =============== -->
+      <!-- =============== BREADCRUMBS END =============== -->
 
-      <!-- ================= SECTION ================= -->
-      <section class="page-gift-cards pb">
+      <!-- ================ HEADER PAGE ================ -->
+      <section class="page-cart pb">
         <div class="container">
-          <div class="shop__top">
-            <div class="row">
-              <div class="col-12">
-                <div class="shop__top-sort">
-                  <span>Sort by:</span>
-                  <div class="custom-select">
-                    <div class="current">
-                      <span>
-                        Price: High to Low
-                      </span>
-                      <svg class="arrow" width="24" height="24" viewBox="0 0 24 24" fill="none">
-                        <path d="M18.5 10L12 16.5L5.5 10" stroke="#000" stroke-width="1.5" stroke-linecap="round"
-                          stroke-linejoin="round"></path>
-                      </svg>
-                    </div>
-                    <ul class="custom-select__list">
-                      <li class="custom-select__item">Price: High to Low</li>
-                      <li class="custom-select__item">Price: Low to High</li>
+          <div class="page-cart__row">
+            <div class="page-cart__items">
+              <h1>Shopping Bag</h1>
+              <div class="page-cart__items-list">
+                <div class="page-cart__item">
+                  <button class="close btn-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M6 18L18 6" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                      <path d="M18 18L6 6" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <a href="single-product.html" class="page-cart__item-img">
+                    <img src="assets/img/products/product-1.jpg" alt="">
+                  </a>
+                  <div class="page-cart__item-content">
+                    <h6>Emily in Paris</h6>
+                    <ul class="page-cart__item-params">
+                      <li>
+                        <div class="name">SKU:</div>
+                        <div class="value">RE00031-1(2605)</div>
+                      </li>
+                      <li>
+                        <div class="name">Metal:</div>
+                        <div class="value">14K White Gold</div>
+                      </li>
+                      <li>
+                        <div class="name">Diamond Shape:</div>
+                        <div class="value">Round</div>
+                      </li>
+                      <li>
+                        <div class="name">Ring Size:</div>
+                        <div class="value">5 1/2</div>
+                      </li>
                     </ul>
+                    <div class="page-cart__item-bottom">
+                      <h6>Quantity:</h6>
+                      <div class="page-cart__item-bottom-wrap">
+                        <div class="quantity">
+                          <button type="button" onclick="this.nextElementSibling.stepDown()">-</button>
+                          <input type="number" min="1" max="100" value="1" class="quantity-input">
+                          <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
+                        </div>
+                        <div class="price">$1,499</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="page-cart__item">
+                  <button class="close btn-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                      <path d="M6 18L18 6" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                      <path d="M18 18L6 6" stroke="black" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                    </svg>
+                  </button>
+                  <a href="single-product.html" class="page-cart__item-img">
+                    <img src="assets/img/products/product-1.jpg" alt="">
+                  </a>
+                  <div class="page-cart__item-content">
+                    <h6>Emily in Paris</h6>
+                    <ul class="page-cart__item-params">
+                      <li>
+                        <div class="name">SKU:</div>
+                        <div class="value">RE00031-1(2605)</div>
+                      </li>
+                      <li>
+                        <div class="name">Metal:</div>
+                        <div class="value">14K White Gold</div>
+                      </li>
+                      <li>
+                        <div class="name">Diamond Shape:</div>
+                        <div class="value">Round</div>
+                      </li>
+                      <li>
+                        <div class="name">Ring Size:</div>
+                        <div class="value">5 1/2</div>
+                      </li>
+                    </ul>
+                    <div class="page-cart__item-bottom">
+                      <h6>Quantity:</h6>
+                      <div class="page-cart__item-bottom-wrap">
+                        <div class="quantity">
+                          quantity
+                        </div>
+                        <div class="price">$1,499</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-          <!-- Андрюлик, этот комент посвящается тебе: в дизайне отрисованно 24 товара на странице -->
-          <div class="product__row row">
-            <div class="product__col col-12 col-md-6 col-lg-4 col-xl-3">
-              <div class="product__item">
-                <div class="product__item-body">
-                  <button class="wishlist">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M12 20C9.39 19.12 3 15.25 3 9C3 6.24 5.24 4 8 4C9.64 4 11.09 4.79 12 6C12.91 4.78 14.37 4 16 4C18.76 4 21 6.23 21 9C21 15.26 14.61 19.12 12 20Z"
-                        stroke="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </button>
-
-                  <div class="product__item-slider">
-                    <div class="product__item-slide">
-                      <a href="single-product.html" class="product__item-img">
-                        <img src="assets/img/products/small-gift-card.png" alt="">
-                      </a>
-                    </div>
-                  </div>
-
-                  <h6 class="product__item-name"><a href="#">Small Gift Card</a></h6>
-                </div>
-
-                <div class="product__item-bottom">
-                  <div class="product__item-rating">
-                    <div class="stars-cover">
-                      <span class="stars-params" style="width: 100%;"></span>
-                      <div class="stars"></div>
-                    </div>
-                    <span>5</span>
-                  </div>
-                  <a href="#" class="btn">
-                    <span class="price">$899</span>
-                    <span>View Detail</span>
-                  </a>
+            <div class="page-cart__banner-col">
+              <div class="page-cart__banner">
+                <img src="assets/img/banners/banner-page-cart.jpg" alt="">
+                <div class="page-cart__banner-content">
+                  <h4>Good things come in small packages</h4>
+                  <p>All jewelry is delivered in our branded box.</p>
                 </div>
               </div>
             </div>
-            <div class="product__col col-12 col-md-6 col-lg-4 col-xl-3">
-              <div class="product__item">
-                <div class="product__item-body">
-                  <button class="wishlist">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M12 20C9.39 19.12 3 15.25 3 9C3 6.24 5.24 4 8 4C9.64 4 11.09 4.79 12 6C12.91 4.78 14.37 4 16 4C18.76 4 21 6.23 21 9C21 15.26 14.61 19.12 12 20Z"
-                        stroke="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </button>
 
-                  <div class="product__item-slider">
-                    <div class="product__item-slide">
-                      <a href="single-product.html" class="product__item-img">
-                        <img src="assets/img/products/medium-gift-card.png" alt="">
-                      </a>
-                    </div>
-                  </div>
-
-                  <h6 class="product__item-name"><a href="#">Medium Gift Card</a></h6>
-                </div>
-
-                <div class="product__item-bottom">
-                  <div class="product__item-rating">
-                    <div class="stars-cover">
-                      <span class="stars-params" style="width: 100%;"></span>
-                      <div class="stars"></div>
-                    </div>
-                    <span>5</span>
-                  </div>
-                  <a href="#" class="btn">
-                    <span class="price">$899</span>
-                    <span>View Detail</span>
-                  </a>
-                </div>
+            <div class="page-cart__order-summary">
+              <h4>Order Summary</h4>
+              <ul class="page-cart__order-summary-list">
+                <li>
+                  <div class="name">Subtotal</div>
+                  <div class="value">$2,449</div>
+                </li>
+                <li>
+                  <div class="name">Express Delivery with Signature $0.00</div>
+                  <div class="value">$0,00</div>
+                </li>
+                <li class="total">
+                  <div class="name">Estimated Total:</div>
+                  <div class="value">$2,449</div>
+                </li>
+              </ul>
+              <div class="input-cover">
+                <input type="email" name="your-email" placeholder="Your E-mail">
+                <label>Your E-mail</label>
               </div>
-            </div>
-            <div class="product__col col-12 col-md-6 col-lg-4 col-xl-3">
-              <div class="product__item">
-                <div class="product__item-body">
-                  <button class="wishlist">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M12 20C9.39 19.12 3 15.25 3 9C3 6.24 5.24 4 8 4C9.64 4 11.09 4.79 12 6C12.91 4.78 14.37 4 16 4C18.76 4 21 6.23 21 9C21 15.26 14.61 19.12 12 20Z"
-                        stroke="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </button>
-
-                  <div class="product__item-slider">
-                    <div class="product__item-slide">
-                      <a href="single-product.html" class="product__item-img">
-                        <img src="assets/img/products/large-gift-card.png" alt="">
-                      </a>
-                    </div>
-                  </div>
-
-                  <h6 class="product__item-name"><a href="#">Large Gift Card</a></h6>
-                </div>
-
-                <div class="product__item-bottom">
-                  <div class="product__item-rating">
-                    <div class="stars-cover">
-                      <span class="stars-params" style="width: 100%;"></span>
-                      <div class="stars"></div>
-                    </div>
-                    <span>5</span>
-                  </div>
-                  <a href="#" class="btn">
-                    <span class="price">$899</span>
-                    <span>View Detail</span>
-                  </a>
-                </div>
+              <div class="page-cart__order-summary-btns">
+                <a href="checkout.html" class="btn"><span>Checkout</span></a>
+                <a href="#" class="btn btn-invert"><span>PayPal</span></a>
+                <a href="#" class="btn btn-invert"><span>Apple Pay</span></a>
+                <a href="#" class="btn btn-invert"><span>VisaMaster</span></a>
               </div>
-            </div>
-            <div class="product__col col-12 col-md-6 col-lg-4 col-xl-3">
-              <div class="product__item">
-                <div class="product__item-body">
-                  <button class="wishlist">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                      <path
-                        d="M12 20C9.39 19.12 3 15.25 3 9C3 6.24 5.24 4 8 4C9.64 4 11.09 4.79 12 6C12.91 4.78 14.37 4 16 4C18.76 4 21 6.23 21 9C21 15.26 14.61 19.12 12 20Z"
-                        stroke="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                    </svg>
-                  </button>
-
-                  <div class="product__item-slider">
-                    <div class="product__item-slide">
-                      <a href="single-product.html" class="product__item-img">
-                        <img src="assets/img/products/super-large-gift-card.png" alt="">
-                      </a>
-                    </div>
-                  </div>
-
-                  <h6 class="product__item-name"><a href="#">Super Large Gift Card</a></h6>
-                </div>
-
-                <div class="product__item-bottom">
-                  <div class="product__item-rating">
-                    <div class="stars-cover">
-                      <span class="stars-params" style="width: 100%;"></span>
-                      <div class="stars"></div>
-                    </div>
-                    <span>5</span>
-                  </div>
-                  <a href="#" class="btn">
-                    <span class="price">$899</span>
-                    <span>View Detail</span>
-                  </a>
-                </div>
+              <div class="page-cart__order-summary-bottom">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Dolor sit amet, sed do eiusmod,consectetur adipiscing elit, sed do eiusmod tempor
+                sed tempor incididunt.
               </div>
             </div>
           </div>

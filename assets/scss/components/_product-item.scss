@@ -167,12 +167,34 @@
     display: flex;
     align-items: center;
     line-height: 24px;
-    font-weight: 300;
+    font-weight: 500;
     color: map-get($colors, "black-100");
-    svg {
+    > span {
+      transform: translateY(1px);
+    }
+    .stars-cover {
       display: block;
       margin-right: 3px;
-      transform: translateY(-1px);
+      position: relative;
+      flex-shrink: 0;
+    }
+    .stars {
+      width: 128px;
+      height: 24px;
+      background-image: url("../img/rating-stars.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      z-index: 1;
+      position: relative;
+    }
+    .stars-params {
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      height: 24px;
+      background-color: map-get($colors, "accent");
     }
   }
 
