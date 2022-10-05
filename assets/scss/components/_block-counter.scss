@@ -1,0 +1,65 @@
+.block-counter {
+  .row {
+    row-gap: 40px;
+  }
+  &__item {
+    min-height: 436px;
+    text-align: center;
+    border: 2px solid map-get($colors, "accent");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 48px;
+    transition: $transition;
+    @media (max-width: map-get($media, "xxxl")) {
+      min-height: 400px;
+    }
+    @media (max-width: map-get($media, "xxl")) {
+      min-height: 360px;
+    }
+    @media (max-width: map-get($media, "lg")) {
+      min-height: 310px;
+      padding: 24px;
+    }
+    &:hover {
+      box-shadow: 0px 8px 16px rgba(46, 228, 237, 0.2), 0px 10px 20px rgba(14, 174, 196, 0.2);
+      .number {
+        transform: translateY(-3px);
+      }
+      .text {
+        transform: translateY(3px);
+      }
+    }
+    .number {
+      color: map-get($colors, "accent");
+      font-size: 64px;
+      line-height: 1;
+      font-weight: 500;
+      transition: $transition;
+      @media (max-width: map-get($media, "xxl")) {
+        font-size: 52px;
+      }
+      @media (max-width: map-get($media, "lg")) {
+        font-size: 40px;
+      }
+      @media (max-width: map-get($media, "md")) {
+        font-size: 34px;
+      }
+    }
+    .text {
+      margin-top: 32px;
+      font-size: 20px;
+      line-height: 1.75;
+      font-weight: 500;
+      transition: $transition;
+      @media (max-width: map-get($media, "xxl")) {
+        font-size: 18px;
+        margin-top: 24px;
+      }
+      @media (max-width: map-get($media, "lg")) {
+        font-size: $font_size;
+      }
+    }
+  }
+}

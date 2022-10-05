@@ -538,7 +538,7 @@
                       <div class="page-cart__item-bottom-wrap">
                         <div class="quantity">
                           <button type="button" onclick="this.nextElementSibling.stepDown()">-</button>
-                          <input type="number" min="1" max="100" value="1" class="quantity-input">
+                          <input type="number" min="1" max="100" value="1" readonly class="quantity-input">
                           <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                         </div>
                         <div class="price">$1,499</div>
@@ -582,13 +582,16 @@
                       <h6>Quantity:</h6>
                       <div class="page-cart__item-bottom-wrap">
                         <div class="quantity">
-                          quantity
+                          <button type="button" onclick="this.nextElementSibling.stepDown()">-</button>
+                          <input type="number" min="1" max="100" value="1" readonly class="quantity-input">
+                          <button type="button" onclick="this.previousElementSibling.stepUp()">+</button>
                         </div>
                         <div class="price">$1,499</div>
                       </div>
                     </div>
                   </div>
                 </div>
+
               </div>
             </div>
             <div class="page-cart__banner-col">
@@ -659,7 +662,7 @@
             <ul>
               <li><a href="about.html">About Company</a></li>
               <li><a href="contact.html">Contact Us</a></li>
-              <li><a href="#">Shipping & Returns</a></li>
+              <li><a href="delivery.html">Delivery and Returns</a></li>
               <li><a href="gift-cards.html">Gift Cards</a></li>
               <li><a href="certification.html">Certification</a></li>
               <li><a href="privaci-poilicy">Privaci Poilicy</a></li>

@@ -341,7 +341,7 @@
   $('.zoom-img').elevateZoom({
     responsive: true,
     zoomType: 'inner',
-    cursor: 'crosshair',
+    cursor: 'zoom-in',
     zoomWindowFadeIn: 350,
     zoomWindowFadeOut: 350,
   });

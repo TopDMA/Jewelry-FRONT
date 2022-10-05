@@ -1,0 +1,103 @@
+.thanks-page {
+  padding-top: 72px;
+  .row {
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 480px;
+    margin-left: 127px;
+    @media (max-width: map-get($media, "xxxl")) {
+      margin-left: 87px;
+    }
+    @media (max-width: map-get($media, "xxl")) {
+      margin-left: 57px;
+    }
+    @media (max-width: map-get($media, "lg")) {
+      margin-left: 0px;
+    }
+    @media (max-width: map-get($media, "md")) {
+      max-width: 100%;
+      text-align: center;
+    }
+    h1 {
+      font-weight: 400;
+    }
+    p {
+      margin-top: 28px;
+      line-height: 1.75;
+    }
+    .btn {
+      margin-top: 62px;
+      width: min(355px, 100%);
+    }
+  }
+
+  &__order {
+    margin-top: 24px;
+    span {
+      color: map-get($colors, "accent");
+    }
+  }
+
+  &__banner {
+    min-height: 480px;
+    padding: 48px 32px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    position: relative;
+    @media (max-width: map-get($media, "md")) {
+      min-height: 360px;
+      margin-top: 60px;
+    }
+    @media (max-width: map-get($media, "sm")) {
+      min-height: 310px;
+    }
+    @media (max-width: map-get($media, "xs")) {
+      padding: 32px 24px;
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 50vw;
+      max-width: none;
+      object-fit: cover;
+      transition: 0.35s ease-out;
+      pointer-events: none;
+      @media (min-width: 2000px) {
+        width: 40vw;
+      }
+      @media (max-width: map-get($media, "md")) {
+        width: 100%;
+        max-width: 100%;
+      }
+      @media (max-width: map-get($media, "xs")) {
+        object-position: -110px;
+      }
+    }
+  }
+
+  &__banner-content {
+    width: min(50%, 100%);
+    position: relative;
+    z-index: 1;
+    transition: 0.35s ease-out;
+    @media (max-width: map-get($media, "xl")) {
+      width: min(50%, 100%);
+    }
+    h5 {
+      + * {
+        margin-top: 24px;
+        @media (max-width: map-get($media, "xs")) {
+          margin-top: 16px;
+        }
+      }
+    }
+    p {
+      font-weight: 400;
+    }
+  }
+}

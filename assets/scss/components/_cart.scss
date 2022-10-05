@@ -11,7 +11,11 @@
     grid-template-areas:
       "a b"
       "c b";
-    @media (max-width: map-get($media, "sm")) {
+    @media (max-width: map-get($media, "xxl")) {
+      grid-template-columns: 2fr 430px;
+      gap: 40px 80px;
+    }
+    @media (max-width: map-get($media, "lg")) {
       grid-template-rows: auto auto auto;
       grid-template-columns: 1fr;
       grid-template-areas:
@@ -37,6 +41,15 @@
     justify-content: flex-end;
     position: relative;
     overflow: hidden;
+    @media (max-width: map-get($media, "xxl")) {
+      padding: 32px 50px;
+    }
+    @media (max-width: map-get($media, "xl")) {
+      min-height: 280px;
+    }
+    @media (max-width: map-get($media, "xs")) {
+      padding: 32px 24px;
+    }
     &:hover {
       img {
         transform: scale(1.05);
@@ -54,6 +67,9 @@
       object-fit: cover;
       transition: 0.35s ease-out;
       pointer-events: none;
+      @media (max-width: map-get($media, "xs")) {
+        object-position: -110px;
+      }
     }
   }
 
@@ -62,13 +78,25 @@
     position: relative;
     z-index: 1;
     transition: 0.35s ease-out;
+    @media (max-width: map-get($media, "xl")) {
+      width: min(50%, 100%);
+    }
     h4 {
+      @media (max-width: map-get($media, "xs")) {
+        font-size: 20px;
+      }
       + * {
         margin-top: 40px;
+        @media (max-width: map-get($media, "xs")) {
+          margin-top: 24px;
+        }
       }
     }
     p {
-      font-size: 20px;
+      font-size: $font_size + 4px;
+      @media (max-width: map-get($media, "xs")) {
+        font-size: $font_size;
+      }
     }
   }
 
@@ -76,6 +104,13 @@
     grid-area: b;
     padding: 48px;
     border: 2px dotted map-get($colors, "accent");
+    align-self: flex-start;
+    @media (max-width: map-get($media, "xxl")) {
+      padding: 32px;
+    }
+    @media (max-width: map-get($media, "xs")) {
+      padding: 32px 24px;
+    }
     > * {
       + * {
         margin-top: 40px;
@@ -85,6 +120,9 @@
 
   &__order-summary-list {
     margin-top: 80px;
+    @media (max-width: map-get($media, "sm")) {
+      margin-top: 60px;
+    }
     li {
       display: flex;
       justify-content: space-between;
@@ -120,6 +158,7 @@
 
 .page-cart {
   &__items-list {
+    margin-top: 24px;
     border-bottom: 2px solid map-get($colors, "gray-100");
   }
 
@@ -129,6 +168,9 @@
     justify-content: space-between;
     border-top: 2px solid map-get($colors, "gray-100");
     padding-block: 24px;
+    @media (max-width: map-get($media, "xs")) {
+      flex-direction: column;
+    }
     .close {
       position: absolute;
       top: 24px;
@@ -153,6 +195,9 @@
     flex-shrink: 0;
     padding: 10px;
     width: 228px;
+    @media (max-width: map-get($media, "xs")) {
+      width: 100%;
+    }
     &:hover {
       img {
         transform: scale(0.95);
@@ -173,6 +218,9 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    @media (max-width: map-get($media, "xs")) {
+      margin-left: 0;
+    }
   }
 
   &__item-params {
@@ -180,6 +228,9 @@
     li {
       display: flex;
       font-size: 14px;
+      @media (max-width: map-get($media, "xs")) {
+        justify-content: space-between;
+      }
       + li {
         margin-top: 6px;
       }

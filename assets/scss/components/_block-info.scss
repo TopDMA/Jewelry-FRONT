@@ -1,0 +1,15 @@
+.block-info {
+  .row {
+    justify-content: space-between;
+  }
+  p {
+    line-height: 1.75;
+  }
+
+  &__content {
+    @media (max-width: map-get($media, "md")) {
+      order: 1;
+      margin-top: 60px;
+    }
+  }
+}

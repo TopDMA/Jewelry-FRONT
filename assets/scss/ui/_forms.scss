@@ -44,6 +44,7 @@ textarea {
 	border-width: 0 0 2px 0;
 	color: map-get($colors, "black");
 	border-color: map-get($colors, "black-100");
+	background: transparent;
 	transition: $transition;
 	&:hover {
 		border-color: map-get($colors, "accent");
@@ -55,6 +56,13 @@ textarea {
 			opacity: 0;
 		}
 	}
+}
+
+textarea {
+	min-height: 84px;
+	resize: vertical;
+	overflow: hidden;
+	padding-top: 10px;
 }
 
 // FLOAT LABEL
@@ -110,10 +118,67 @@ textarea {
 		width: 48px;
 		height: 40px;
 		border: 2px solid map-get($colors, "accent");
+		padding-bottom: 2px;
 		transition: $transition;
 		&:hover {
 			background-color: map-get($colors, "accent");
 			color: map-get($colors, "white");
+		}
+	}
+}
+
+// AGREA
+.agrea {
+	input {
+		display: none;
+		cursor: pointer;
+		&:checked ~ label:after {
+			content: "";
+			display: block;
+			position: absolute;
+			top: 3px;
+			left: 9px;
+			width: 6px;
+			height: 14px;
+			border: solid map-get($colors, "accent");
+			border-width: 0 2px 2px 0;
+			transform: rotate(45deg);
+		}
+	}
+
+	label {
+		position: relative;
+		cursor: pointer;
+		display: inline-block;
+		padding-left: 40px;
+		position: relative;
+		line-height: 24px;
+		user-select: none;
+		a {
+			position: relative;
+			z-index: 1;
+			color: map-get($colors, "accent");
+			text-decoration: underline;
+			&:hover {
+				color: map-get($colors, "black-100");
+			}
+		}
+		&:before {
+			content: "";
+			-webkit-appearance: none;
+			background-color: transparent;
+			border: 2px solid map-get($colors, "black-100");
+			width: 24px;
+			height: 24px;
+			display: inline-block;
+			position: relative;
+			vertical-align: middle;
+			cursor: pointer;
+			margin-right: 16px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			border-radius: 2px;
 		}
 	}
 }

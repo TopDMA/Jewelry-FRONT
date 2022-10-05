@@ -29,6 +29,7 @@
         font-weight: 300;
       }
       a {
+        display: inline-block;
         color: map-get($colors, "accent");
         border-bottom: 1px solid map-get($colors, "accent");
         &:hover {

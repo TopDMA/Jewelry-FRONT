@@ -34,6 +34,9 @@
     .title {
       color: map-get($colors, "black");
     }
+    .text {
+      font-weight: 300;
+    }
 
     &--variant1 {
       padding: 80px 50px;
@@ -124,6 +127,61 @@
         }
         @media (max-width: map-get($media, "md")) {
           max-width: 175px;
+        }
+      }
+    }
+
+    &--variant4 {
+      min-height: 600px;
+      align-items: center;
+      padding: 32px 16%;
+      @media (max-width: map-get($media, "xxxl")) {
+        padding-inline: 10%;
+      }
+      @media (max-width: map-get($media, "xxl")) {
+        min-height: 500px;
+      }
+      @media (max-width: map-get($media, "lg")) {
+        min-height: 410px;
+        padding-inline: 60px;
+      }
+      @media (max-width: map-get($media, "md")) {
+        min-height: 360px;
+        padding-inline: 32px;
+      }
+      &:hover {
+        .banner {
+          &__item-content {
+            transform: translateX(-10px);
+            @media (max-width: map-get($media, "xl")) {
+              transform: translateX(-5px);
+            }
+          }
+        }
+      }
+      .banner {
+        &__item-content {
+          max-width: 550px;
+          @media (max-width: map-get($media, "lg")) {
+            max-width: 450px;
+          }
+          @media (max-width: map-get($media, "md")) {
+            max-width: 440px;
+          }
+          .text {
+            margin-top: 24px;
+            line-height: 1.75;
+            @media (max-width: map-get($media, "md")) {
+              margin-top: 20px;
+            }
+          }
+          .btn {
+            margin-top: 48px;
+            width: min(356px, 100%);
+            @media (max-width: map-get($media, "md")) {
+              margin-top: 32px;
+            }
+          }
         }
       }
     }

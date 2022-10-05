@@ -1,0 +1,15 @@
+.faq {
+  border-block: 2px solid map-get($colors, "accent");
+  padding-block: 70px;
+  &__cover {
+  }
+
+  &__item {
+    padding-top: 24px;
+    border-top: 2px solid map-get($colors, "accent");
+    margin-top: 24px;
+    .answer {
+      margin-top: 16px;
+    }
+  }
+}
