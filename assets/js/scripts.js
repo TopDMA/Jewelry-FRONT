@@ -338,41 +338,54 @@
   SINGLE PRODUCT SLIDER
   --------------------------------------------- */
   // https://igorlino.github.io/elevatezoom-plus/index.html
-  $('.zoom-img').elevateZoom({
-    responsive: true,
-    zoomType: 'inner',
-    cursor: 'zoom-in',
-    zoomWindowFadeIn: 350,
-    zoomWindowFadeOut: 350,
-  });
+  if ($('.zoom-img')[0]) {
+    $('.zoom-img').elevateZoom({
+      responsive: true,
+      zoomType: 'inner',
+      cursor: 'zoom-in',
+      zoomWindowFadeIn: 350,
+      zoomWindowFadeOut: 350,
+    });
 
-  $('.single-product__slider-for').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    fade: true,
-    asNavFor: '.single-product__slider-nav',
-  });
-  $('.single-product__slider-nav').slick({
-    slidesToShow: 6,
-    slidesToScroll: 1,
-    asNavFor: '.single-product__slider-for',
-    dots: false,
-    arrows: false,
-    focusOnSelect: true,
-    responsive: [
-      {
-        breakpoint: 1441,
-        settings: {
-          slidesToShow: 5,
+    $('.single-product__slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      fade: true,
+      asNavFor: '.single-product__slider-nav',
+    });
+    $('.single-product__slider-nav').slick({
+      slidesToShow: 6,
+      slidesToScroll: 1,
+      asNavFor: '.single-product__slider-for',
+      dots: false,
+      arrows: false,
+      focusOnSelect: true,
+      responsive: [
+        {
+          breakpoint: 1441,
+          settings: {
+            slidesToShow: 5,
+          },
         },
-      },
-      {
-        breakpoint: 992,
-        settings: {
-          slidesToShow: 4,
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 4,
+          },
         },
-      },
-    ],
+      ],
+    });
+  }
+
+  /* ---------------------------------------------
+  CHECKOUT TOGGLE
+  --------------------------------------------- */
+  $('.checkout__toggle-question').on('click', function () {
+    $(this)
+      .toggleClass('active')
+      .parents('.checkout__toggle')
+      .find('.checkout__toggle-answer')
+      .toggle('fast');
   });
 })(jQuery);

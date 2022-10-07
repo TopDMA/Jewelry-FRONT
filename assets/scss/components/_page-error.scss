@@ -1,0 +1,30 @@
+.page-error {
+  display: flex;
+  align-items: center;
+}
+.section-error {
+  width: 100%;
+  text-align: center;
+  img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 32px;
+    @media (max-width: map-get($media, "sm")) {
+      max-width: 260px;
+    }
+  }
+  p {
+    margin-top: 24px;
+    max-width: 730px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.75;
+    @media (max-width: map-get($media, "sm")) {
+      font-size: 14px;
+    }
+  }
+  .btn {
+    margin-top: 32px;
+    width: min(356px, 100%);
+  }
+}

@@ -23,6 +23,10 @@
     .custom-select {
       flex-shrink: 0;
       margin-left: 12px;
+      .current {
+        height: auto;
+        border: none;
+      }
       &__list {
         left: auto;
         right: 0;

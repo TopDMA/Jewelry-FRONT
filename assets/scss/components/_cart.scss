@@ -134,6 +134,9 @@
         font-weight: 500;
         margin-top: 32px;
         font-size: 20px;
+        @media (max-width: map-get($media, "sm")) {
+          font-size: 18px;
+        }
       }
     }
     .name {
@@ -142,7 +145,7 @@
     .value {
       font-weight: 500;
       flex-shrink: 0;
-      margin-left: 12px;
+      margin-left: 24px;
     }
   }
 
@@ -258,8 +261,6 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 8px;
-    .quantity {
-    }
     .price {
       font-weight: 500;
     }

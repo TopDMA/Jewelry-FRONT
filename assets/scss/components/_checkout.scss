@@ -1,0 +1,200 @@
+.checkout {
+  &__row {
+    margin-top: 25px;
+    display: grid;
+    grid-template-columns: 2fr 480px;
+    grid-template-rows: auto 1fr;
+    column-gap: 280px;
+    row-gap: 60px;
+    grid-template-areas: "a b";
+    @media (max-width: map-get($media, "xxxl")) {
+      column-gap: 150px;
+    }
+    @media (max-width: map-get($media, "xxl")) {
+      grid-template-columns: 2fr 430px;
+      column-gap: 82px;
+    }
+    @media (max-width: map-get($media, "lg")) {
+      grid-template-rows: auto auto;
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "a"
+        "b";
+    }
+  }
+
+  &__body {
+    grid-area: a;
+    padding-top: 50px;
+    @media (max-width: map-get($media, "xxl")) {
+      padding-top: 34px;
+    }
+  }
+
+  &__sidebar {
+    grid-area: b;
+  }
+
+  &__form {
+    row-gap: 24px;
+    margin-top: 40px;
+    .btn {
+      width: 100%;
+      margin-top: 24px;
+    }
+  }
+
+  &__order {
+    padding: 48px;
+    border: 2px dotted map-get($colors, "accent");
+    align-self: flex-start;
+    @media (max-width: map-get($media, "xxl")) {
+      padding: 32px;
+    }
+    @media (max-width: map-get($media, "xs")) {
+      padding: 32px 24px;
+    }
+    > * {
+      + * {
+        margin-top: 40px;
+        @media (max-width: map-get($media, "xxl")) {
+          margin-top: 32px;
+        }
+      }
+    }
+    .page-cart {
+      &__item {
+        font-size: 14px;
+      }
+
+      &__item-img {
+        width: 156px;
+        @media (max-width: map-get($media, "xs")) {
+          width: 100%;
+        }
+      }
+
+      &__item-bottom-wrap {
+        .quantity {
+          color: map-get($colors, "gray-400");
+        }
+      }
+    }
+  }
+
+  &__toggle {
+    margin-top: 40px;
+  }
+
+  &__toggle-question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 500;
+    padding: 16px 48px;
+    border-bottom: 2px solid map-get($colors, "accent");
+    cursor: pointer;
+    user-select: none;
+    @media (max-width: map-get($media, "xxl")) {
+      padding-inline: 32px;
+    }
+    @media (max-width: map-get($media, "xs")) {
+      padding-inline: 24px;
+    }
+    span {
+      width: 18px;
+      height: 18px;
+      position: relative;
+      flex-shrink: 0;
+      @media (max-width: map-get($media, "xs")) {
+        width: 16px;
+        height: 16px;
+      }
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        height: 2px;
+        border-radius: 2px;
+        transform: translate(-50%, -50%);
+        background-color: map-get($colors, "black-100");
+        transition: $transition;
+      }
+      &:after {
+        z-index: 1;
+        transform: translate(-50%, -50%) rotate(-90deg);
+      }
+    }
+    &.active {
+      span {
+        &:after {
+          transform: translate(-50%, -50%) rotate(0deg);
+        }
+      }
+    }
+  }
+
+  &__toggle-answer {
+    display: none;
+    width: 100% !important;
+    .answer {
+      padding: 16px 48px;
+      @media (max-width: map-get($media, "xxl")) {
+        padding-inline: 32px;
+      }
+      @media (max-width: map-get($media, "xs")) {
+        padding-inline: 24px;
+      }
+    }
+  }
+
+  &__banner {
+    margin-top: 40px;
+    min-height: 268px;
+    padding: 32px 48px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    @media (max-width: map-get($media, "xxl")) {
+      padding: 32px;
+    }
+    @media (max-width: map-get($media, "xs")) {
+      min-height: 220px;
+      padding: 24px;
+    }
+    &:hover {
+      .checkout__banner-content {
+        transform: translateX(-5px);
+      }
+      img {
+        transform: scale(1.05);
+      }
+    }
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      transition: 0.35s ease-out;
+      pointer-events: none;
+      @media (max-width: map-get($media, "xs")) {
+      }
+    }
+  }
+
+  &__banner-content {
+    max-width: 150px;
+    position: relative;
+    z-index: 1;
+    transition: 0.35s ease-out;
+    p {
+      margin-top: 20px;
+    }
+  }
+}

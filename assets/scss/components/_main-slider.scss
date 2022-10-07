@@ -90,6 +90,7 @@
       width: min(440px, 100%);
     }
     .title {
+      font-weight: 700;
       opacity: 0;
       transform: translateX(-30px);
       transition: opacity 0.35s ease, transform 0.35s ease;
